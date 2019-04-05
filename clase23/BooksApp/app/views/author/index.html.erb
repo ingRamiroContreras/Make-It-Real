@@ -1,0 +1,19 @@
+
+<a href="/students/new">Crear un nuevo estudiante<a>
+<br/>
+<p>Los autores son: </p>
+<ul>    
+    <% @Authors.each do |autor| %>
+        <li>
+            
+            <a href="/students/<%=autor.id%>"><%=autor.name%><a> 
+            <%=link_to "editar", edit_author_path(autor)%>
+            <a href="/students/<%=autor.id%>/edit">Editar Autor </a> 
+
+        <%= form_for autor, :method => :delete do |f| %>
+            <%= f.submit %>
+        <% end %>
+
+        </li>
+    <% end %>    
+</ul>
