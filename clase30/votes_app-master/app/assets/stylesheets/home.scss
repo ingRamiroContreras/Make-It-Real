@@ -1,0 +1,33 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+nav{
+  margin-bottom: 20px;
+}
+.card{
+  margin-bottom: 20px;
+}
+
+#img-lan{
+  width: 150px;
+  height: 150px;
+  display:block;
+  margin:auto;
+  margin-top: 10px;
+}
+
+#currentUser{
+  color: white;
+
+}
+
+#name{
+  display: inline;
+  text-align: center;
+}
+
+#BtnVote{
+  display: block;
+  text-align: center;
+}

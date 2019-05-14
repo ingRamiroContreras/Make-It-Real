@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-around">
+    <% @languages.each do |language| %>
+    <div class="col-4">
+      <div class="card text-center" style="width: 18rem;">
+        <img  id='img-lan' src="<%=language.imgurl%>" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title"><%=language.name%></h5>
+          <p class="card-text"><%=language.description.truncate(100) if language.description%></p>
+          <%= button_to 'Votar',  language_votes_path(language), method: :post, class: 'btn btn-primary' %>
+          <div class="card-footer  text-muted">Votos: <%= language.votes.count %></div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
